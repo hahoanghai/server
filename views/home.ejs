@@ -3,18 +3,60 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="layout.css" rel="stylesheet">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="jquery.js"></script>
     <script src="socket.io/socket.io.js"></script>
-    <script>
+    <script src="script.js"></script>
 
-     var socket = io("http://localhost:3000");
-
-      $(document).ready(function(){
-
-      });
-    </script>
   </head>
   <body>
+    <div id="wrapper">
+      <div class="row form-group" id="loginForm">
+        <div class="col-md-8 col-xl-9">
+          <input type="text" id="username" name="username" placeholder="username" class="form-control">
+        </div>
+        <div class="col-md-4 col-xl-3">
+          <input type="button" id="login" value="Log In" class="form-control">
+        </div>
+      </div>
+      <div class="container-fluid" id="chatForm">
+        <div class="row">
+          <div class="col-md-4 col-xl-3" id="left">
+            <div id="boxTitle">
+              User Online
+            </div>
+            <hr>
+            <div id="boxContent" class="container">
+            </div>
+          </div>
+          <div class="col-md-8 col-xl-9" id="right">
+            <div class="row form-group" id="sayHi">
+              <div class="col-md-8 col-xl-9">
+                Hello <span id="currentUser"></span>
+              </div>
+              <div class="col-md-4 col-xl-3">
+                <input type="button" class="form-control" id="logout" value="Log Out">
+              </div>
+            </div>
+            <div class="" id="listMessage">
 
+            </div>
+            <div class="" id="typingMessage">
+
+            </div>
+            <div class="row form-group" id="message">
+              <div class="col-md-8 col-xl-9">
+                <input type="text" class="form-control" id="textMessage" name="textMessage" placeholder="Type Your Message">
+              </div>
+              <div class="col-md-4 col-xl-3">
+                <input type="button" class="form-control" id="sendMessage" value="Send">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

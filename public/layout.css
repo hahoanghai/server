@@ -1,0 +1,9 @@
+#left{background: #f0f2d0; float: left;}
+
+#right{background: #d4f9f8; float: right;}
+
+#listMessage{min-height: 400px;}
+
+#loginForm{margin-top: 20px; margin-left: 20px; margin-right: 20px;}
+
+#left, #right{padding-top: 20px}
